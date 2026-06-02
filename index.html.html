@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adera Partners | Business Advisory — Bournemouth, Hampshire & Dorset</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="Adera Partners is a senior business advisory firm based in Bournemouth, serving Hampshire and Dorset. We advise on sustainability, mergers & acquisitions, and board governance for growth companies, turnarounds, and cross-border transactions.">
+<meta name="keywords" content="business advisory Bournemouth, business advisory Hampshire, business advisory Dorset, M&A advisory Bournemouth, sustainability advisory Hampshire, board advisory Dorset, corporate advisory South of England, mergers acquisitions Hampshire, turnaround advisory UK, non-executive director Bournemouth, investment committee advisory, growth company chairman, cross-border M&A UK">
+<meta name="author" content="Adera Partners">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.adera-partners.com">
+
+<!-- Open Graph (LinkedIn, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Adera Partners | Business Advisory — Bournemouth, Hampshire & Dorset">
+<meta property="og:description" content="Senior business advisory for sustainability, M&A, and board governance. Based in Bournemouth, serving Hampshire, Dorset, and internationally.">
+<meta property="og:url" content="https://www.adera-partners.com">
+<meta property="og:site_name" content="Adera Partners">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Adera Partners | Business Advisory — Bournemouth">
+<meta name="twitter:description" content="Senior business advisory for sustainability, M&A, and board governance. Based in Bournemouth, Hampshire & Dorset.">
+
+<!-- Geo targeting -->
+<meta name="geo.region" content="GB-HAM">
+<meta name="geo.placename" content="Bournemouth, Hampshire, Dorset">
+<meta name="geo.position" content="50.7192;-1.8808">
+<meta name="ICBM" content="50.7192, -1.8808">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Adera Partners",
+  "description": "Senior business advisory firm specialising in sustainability, mergers & acquisitions, and board advisory services.",
+  "url": "https://www.adera-partners.com",
+  "email": "anis@adera-group.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bournemouth",
+    "addressRegion": "Dorset",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["Bournemouth", "Hampshire", "Dorset", "United Kingdom"],
+  "serviceType": ["Business Advisory", "Mergers and Acquisitions", "Sustainability Advisory", "Board Advisory"],
+  "knowsAbout": ["ESG Strategy", "Corporate Governance", "M&A", "Turnaround Management", "Cross-border Transactions"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d0d;
+    --sand: #f5f1eb;
+    --stone: #b8a99a;
+    --slate: #3a3a3a;
+    --accent: #8b6f4e;
+    --rule: rgba(139,111,78,0.3);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.6rem 4rem;
+    background: rgba(245,241,235,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    transition: padding 0.4s;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2.8rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.25s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 4rem 6rem 4rem;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.2s forwards;
+  }
+  .hero-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    opacity: 0;
+    animation: fadeUp 1s 0.4s forwards;
+  }
+  .hero-heading em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-rule {
+    width: 48px; height: 1px;
+    background: var(--accent);
+    margin: 2.4rem 0;
+    opacity: 0;
+    animation: fadeIn 1s 0.8s forwards;
+  }
+  .hero-sub {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--slate);
+    max-width: 380px;
+    opacity: 0;
+    animation: fadeUp 1s 0.9s forwards;
+  }
+  .hero-cta {
+    margin-top: 3rem;
+    display: inline-flex; align-items: center; gap: 1rem;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0;
+    animation: fadeUp 1s 1.1s forwards;
+    transition: gap 0.3s;
+  }
+  .hero-cta:hover { gap: 1.6rem; color: var(--accent); }
+  .hero-cta::after {
+    content: '→';
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-right-inner {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #2c2420 0%, #4a3728 40%, #6b4f38 100%);
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .hero-pattern {
+    position: absolute; inset: 0;
+    opacity: 0.06;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 48px, rgba(255,255,255,0.5) 48px, rgba(255,255,255,0.5) 49px),
+      repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(255,255,255,0.5) 48px, rgba(255,255,255,0.5) 49px);
+  }
+  .hero-location {
+    position: absolute;
+    bottom: 3rem; left: 3rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    writing-mode: horizontal-tb;
+  }
+
+  /* ── SERVICES ── */
+  #services {
+    padding: 8rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+  .section-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .section-rule { height: 1px; background: var(--rule); align-self: center; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 300;
+    line-height: 1.15;
+    grid-column: 1 / -1;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--rule);
+  }
+  .service-card {
+    padding: 3rem 2.6rem;
+    border-right: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.35s;
+  }
+  .service-card:last-child { border-right: none; }
+  .service-card:hover { background: rgba(139,111,78,0.05); }
+  .service-card::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: rgba(139,111,78,0.18);
+    line-height: 1;
+    margin-bottom: 1.6rem;
+  }
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+  }
+  .service-body {
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--slate);
+  }
+  .service-list {
+    list-style: none;
+    margin-top: 1.4rem;
+  }
+  .service-list li {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--slate);
+    padding: 0.45rem 0;
+    border-top: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 0.7rem;
+  }
+  .service-list li::before {
+    content: '—';
+    color: var(--accent);
+    font-size: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    background: #1e1915;
+    padding: 8rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  #about::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse 60% 50% at 80% 50%, rgba(139,111,78,0.12) 0%, transparent 70%);
+  }
+  .about-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: start;
+    position: relative;
+  }
+  .about-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+  .about-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--sand);
+  }
+  .about-title em { font-style: italic; color: var(--stone); }
+  .about-body {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 2;
+    color: rgba(245,241,235,0.65);
+    margin-top: 2rem;
+  }
+  .about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 1rem;
+  }
+  .stat {
+    padding: 2.4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--sand);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-num span { color: var(--accent); }
+  .stat-desc {
+    font-size: 0.68rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--stone);
+    text-transform: uppercase;
+  }
+
+  /* ── APPROACH ── */
+  #approach {
+    padding: 8rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+  }
+  .approach-step {
+    position: relative;
+    padding-top: 3.5rem;
+  }
+  .approach-step::before {
+    content: attr(data-step);
+    position: absolute; top: 0; left: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgba(139,111,78,0.15);
+    line-height: 1;
+  }
+  .approach-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.9rem;
+  }
+  .approach-body {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--slate);
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--sand);
+    padding: 8rem 4rem;
+    border-top: 1px solid var(--rule);
+  }
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+  .contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-top: 1rem;
+  }
+  .contact-title em { font-style: italic; color: var(--accent); }
+  .contact-sub {
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--slate);
+    margin-top: 1.6rem;
+    max-width: 420px;
+  }
+  .contact-details { margin-top: 3rem; }
+  .contact-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .contact-label {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    min-width: 80px;
+  }
+  .contact-value {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--ink);
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.4rem; }
+  .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-label {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .form-input,
+  .form-textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 0.8rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.25s;
+    width: 100%;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+  .form-textarea { resize: none; height: 90px; }
+  .form-btn {
+    margin-top: 1rem;
+    display: inline-flex; align-items: center; gap: 1rem;
+    background: var(--ink);
+    color: var(--sand);
+    border: none;
+    padding: 1.1rem 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, gap 0.3s;
+    align-self: flex-start;
+  }
+  .form-btn:hover { background: var(--accent); gap: 1.6rem; }
+  .form-btn::after { content: '→'; font-size: 1rem; font-weight: 300; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--sand);
+  }
+  .footer-logo span { color: var(--accent); }
+  .footer-copy {
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: rgba(245,241,235,0.35);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── TRACK RECORD ── */
+  #track-record {
+    background: #f0ebe3;
+    padding: 8rem 4rem;
+    border-top: 1px solid var(--rule);
+  }
+  .track-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .track-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 4rem;
+  }
+  .track-item {
+    background: #f0ebe3;
+    padding: 2.8rem 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+  .track-item:hover { background: rgba(139,111,78,0.07); }
+  .track-tag {
+    display: inline-block;
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--rule);
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1.4rem;
+  }
+  .track-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 0.9rem;
+    color: var(--ink);
+  }
+  .track-desc {
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--slate);
+  }
+  .track-marker {
+    position: absolute;
+    top: 2.8rem; right: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: rgba(139,111,78,0.1);
+    line-height: 1;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1.4rem 2rem; }
+    .nav-links { display: none; }
+    #hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 8rem 2rem 4rem; }
+    #services { padding: 5rem 2rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { border-right: none; border-bottom: 1px solid var(--rule); }
+    #about { padding: 5rem 2rem; }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    #approach { padding: 5rem 2rem; }
+    .approach-grid { grid-template-columns: 1fr 1fr; }
+    #track-record { padding: 5rem 2rem; }
+    .track-grid { grid-template-columns: 1fr; }
+    #contact { padding: 5rem 2rem; }
+    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+    footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Adera <span>Partners</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#track-record">Track Record</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Business Partners · Hampshire &amp; Dorset</p>
+    <h1 class="hero-heading">
+      Counsel for<br>
+      <em>consequential</em><br>
+      decisions
+    </h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">
+      Adera Partners brings senior-level strategic counsel to boards and leadership teams navigating sustainability, mergers &amp; acquisitions, and complex governance transitions.
+    </p>
+    <a href="#contact" class="hero-cta">Arrange a conversation</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-inner">
+      <div class="hero-pattern"></div>
+    </div>
+    <p class="hero-location">Hampshire &amp; Dorset · United Kingdom</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header reveal">
+    <span class="section-label">What we do</span>
+    <div class="section-rule"></div>
+    <h2 class="section-title">Three practices, <em>one standard</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <h3 class="service-title">Sustainability Advisory</h3>
+      <p class="service-body">Helping businesses embed sustainability as a strategic advantage — from ESG framework design to stakeholder reporting and net-zero transition planning.</p>
+      <ul class="service-list">
+        <li>ESG strategy &amp; framework design</li>
+        <li>Net-zero transition planning</li>
+        <li>Regulatory compliance (TCFD, CSRD)</li>
+        <li>Stakeholder &amp; investor reporting</li>
+        <li>Sustainability governance</li>
+      </ul>
+    </div>
+    <div class="service-card reveal" style="transition-delay: 0.15s">
+      <div class="service-num">02</div>
+      <h3 class="service-title">Mergers &amp; Acquisitions</h3>
+      <p class="service-body">Independent advisory across the full transaction lifecycle — origination, structuring, due diligence, and integration — with a focus on cross-border complexity.</p>
+      <ul class="service-list">
+        <li>Transaction origination &amp; structuring</li>
+        <li>Commercial &amp; strategic due diligence</li>
+        <li>Valuation &amp; deal negotiation</li>
+        <li>Cross-border M&amp;A</li>
+        <li>Post-merger integration</li>
+      </ul>
+    </div>
+    <div class="service-card reveal" style="transition-delay: 0.3s">
+      <div class="service-num">03</div>
+      <h3 class="service-title">Board Advisory</h3>
+      <p class="service-body">Senior advisory to boards, audit committees, and family offices on governance, strategy, and long-range capital allocation — objective, experienced, and discreet.</p>
+      <ul class="service-list">
+        <li>Board effectiveness &amp; governance</li>
+        <li>Strategic planning facilitation</li>
+        <li>Succession &amp; leadership advisory</li>
+        <li>Family office governance</li>
+        <li>Independent non-executive support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div>
+      <p class="about-label reveal">Our approach</p>
+      <h2 class="about-title reveal">Substantive advice,<br><em>no intermediaries</em></h2>
+      <p class="about-body reveal">Adera Partners was founded on a straightforward proposition: senior executives and boards deserve direct access to experienced advisors — not junior teams managed at a distance.<br><br>
+      Based in Hampshire and Dorset and operating internationally, we work selectively with a small number of clients where the relationship is genuine and the mandate is meaningful. Our principals bring decades of experience across structured finance, private equity, and corporate governance.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat">
+        <div class="stat-num">40<span>+</span></div>
+        <div class="stat-desc">Years combined advisory experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-desc">Core practice areas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">UK <span>&amp;</span> Intl</div>
+        <div class="stat-desc">Cross-border reach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="section-header reveal">
+    <span class="section-label">How we work</span>
+    <div class="section-rule"></div>
+    <h2 class="section-title">A disciplined <em>process</em></h2>
+  </div>
+  <div class="approach-grid">
+    <div class="approach-step reveal" data-step="01">
+      <h3 class="approach-title">Discovery</h3>
+      <p class="approach-body">We begin every engagement with deep listening — understanding the strategic context, the stakeholders, and what success genuinely looks like.</p>
+    </div>
+    <div class="approach-step reveal" data-step="02" style="transition-delay: 0.1s">
+      <h3 class="approach-title">Analysis</h3>
+      <p class="approach-body">Rigorous independent analysis, drawing on sector knowledge and proprietary frameworks developed over decades of practice.</p>
+    </div>
+    <div class="approach-step reveal" data-step="03" style="transition-delay: 0.2s">
+      <h3 class="approach-title">Counsel</h3>
+      <p class="approach-body">Clear, direct recommendations — presented to decision-makers, not through layers of management. We tell clients what they need to hear.</p>
+    </div>
+    <div class="approach-step reveal" data-step="04" style="transition-delay: 0.3s">
+      <h3 class="approach-title">Execution</h3>
+      <p class="approach-body">We remain engaged through implementation — ensuring advice translates into outcomes, and adjusting where circumstances evolve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK RECORD -->
+<section id="track-record">
+  <div class="track-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Track record</span>
+      <div class="section-rule"></div>
+      <h2 class="section-title">Experience that <em>speaks for itself</em></h2>
+    </div>
+    <div class="track-grid">
+
+      <div class="track-item reveal">
+        <div class="track-marker">01</div>
+        <span class="track-tag">Cross-Border Advisory</span>
+        <h3 class="track-title">US Corporate Entry into the UK Market</h3>
+        <p class="track-desc">Advised multiple US-headquartered corporations on their UK market entry strategies — navigating regulatory requirements, structuring local operations, identifying acquisition targets, and building the governance frameworks needed to operate effectively in the British market.</p>
+      </div>
+
+      <div class="track-item reveal" style="transition-delay: 0.1s">
+        <div class="track-marker">02</div>
+        <span class="track-tag">International Expansion</span>
+        <h3 class="track-title">European Business Expansion into the UK</h3>
+        <p class="track-desc">Supported European businesses seeking to establish or grow their UK presence — from initial market assessment and structuring through to commercial partnerships, FCA considerations, and integration into UK corporate and regulatory frameworks.</p>
+      </div>
+
+      <div class="track-item reveal" style="transition-delay: 0.15s">
+        <div class="track-marker">03</div>
+        <span class="track-tag">Governance</span>
+        <h3 class="track-title">Advisory &amp; Investment Committee Membership</h3>
+        <p class="track-desc">Served on advisory committees and investment committees across a range of sectors — contributing independent strategic judgement, risk oversight, and capital allocation discipline to boards and management teams at critical decision points.</p>
+      </div>
+
+      <div class="track-item reveal" style="transition-delay: 0.2s">
+        <div class="track-marker">04</div>
+        <span class="track-tag">Chairman</span>
+        <h3 class="track-title">Growth Company Chairmanships</h3>
+        <p class="track-desc">Served as Chairman of a number of growth-stage companies — providing strategic direction, board leadership, and investor relations support during periods of significant commercial and organisational expansion.</p>
+      </div>
+
+      <div class="track-item reveal" style="transition-delay: 0.25s">
+        <div class="track-marker">05</div>
+        <span class="track-tag">Turnaround</span>
+        <h3 class="track-title">Corporate Turnarounds in the UK</h3>
+        <p class="track-desc">Led and advised on multiple corporate turnarounds across the United Kingdom — stabilising businesses under financial or operational stress, restructuring leadership and capital, and repositioning them for sustainable performance.</p>
+      </div>
+
+      <div class="track-item reveal" style="transition-delay: 0.3s">
+        <div class="track-marker">06</div>
+        <span class="track-tag">Multi-Jurisdictional</span>
+        <h3 class="track-title">Cross-Border Structuring &amp; Capital</h3>
+        <p class="track-desc">Extensive experience structuring cross-border transactions and capital arrangements — spanning UK, US, and European entities, with deep familiarity in international holding structures, trust arrangements, and FCA-regulated vehicles.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="section-label reveal">Get in touch</p>
+      <h2 class="contact-title reveal">Let us start a<br><em>conversation</em></h2>
+      <p class="contact-sub reveal">We welcome initial conversations with no obligation. If there is a potential fit, we will say so — and if there is not, we will say that too.</p>
+      <div class="contact-details reveal">
+        <div class="contact-item">
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Hampshire &amp; Dorset, United Kingdom</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Enquiries</span>
+          <span class="contact-value">anis@adera-group.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Availability</span>
+          <span class="contact-value">By appointment</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-field">
+        <label class="form-label">Your name</label>
+        <input type="text" class="form-input" placeholder="Full name">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Organisation</label>
+        <input type="text" class="form-input" placeholder="Company or institution">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="your@email.com">
+      </div>
+      <div class="form-field">
+        <label class="form-label">How can we help?</label>
+        <textarea class="form-textarea" placeholder="Briefly describe your situation or enquiry…"></textarea>
+      </div>
+      <button class="form-btn">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Adera <span>Partners</span></div>
+  <div class="footer-copy">© 2026 Adera Partners. Hampshire &amp; Dorset, United Kingdom. All rights reserved.</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Nav shrink on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.padding = window.scrollY > 60 ? '1rem 4rem' : '1.6rem 4rem';
+  });
+</script>
+</body>
+</html>
