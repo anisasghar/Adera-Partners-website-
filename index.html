@@ -585,6 +585,28 @@
     footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
   }
 </style>
+<style>
+  .fs-success {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--accent);
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+  }
+  .fs-error {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #c0392b;
+    padding: 0.8rem 0;
+    margin-bottom: 0.5rem;
+  }
+  [data-fs-submit-btn]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>
 </head>
 <body>
 
@@ -801,24 +823,26 @@
         </div>
       </div>
     </div>
-    <form class="contact-form reveal" action="https://formspree.io/f/xkolnrpg" method="POST">
+    <div data-fs-success class="fs-success" style="display:none">Thank you — your enquiry has been received. We will be in touch shortly.</div>
+      <div data-fs-error class="fs-error" style="display:none"></div>
+      <form class="contact-form reveal" id="contact-form">
       <div class="form-field">
         <label class="form-label">Your name</label>
-        <input type="text" class="form-input" placeholder="Full name">
+        <input type="text" class="form-input" name="name" placeholder="Full name" data-fs-field required>
       </div>
       <div class="form-field">
         <label class="form-label">Organisation</label>
-        <input type="text" class="form-input" placeholder="Company or institution">
+        <input type="text" class="form-input" name="organisation" placeholder="Company or institution" data-fs-field>
       </div>
       <div class="form-field">
         <label class="form-label">Email</label>
-        <input type="email" class="form-input" placeholder="your@email.com">
+        <input type="email" class="form-input" name="email" placeholder="your@email.com" data-fs-field required>
       </div>
       <div class="form-field">
         <label class="form-label">How can we help?</label>
-        <textarea class="form-textarea" placeholder="Briefly describe your situation or enquiry…"></textarea>
+        <textarea class="form-textarea" name="message" placeholder="Briefly describe your situation or enquiry…" data-fs-field required></textarea>
       </div>
-      <button type="submit" class="form-btn">Send Enquiry</button>
+      <button type="submit" class="form-btn" data-fs-submit-btn>Send Enquiry</button>
     </form>
   </div>
 </section>
@@ -845,5 +869,11 @@
     nav.style.padding = window.scrollY > 60 ? '1rem 4rem' : '1.6rem 4rem';
   });
 </script>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'xkolnrpg' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
